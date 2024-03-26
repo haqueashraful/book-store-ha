@@ -5,9 +5,9 @@ import Footer from "../Navfooter/Footer";
 const Layout = () => {
   return (
     <div>
-      <div className=" lg:mx-28">
+      <div className=" lg:mx-28 md:mx-12 mx-2 ">
         <Nav />
-        <div className=" my-14">
+        <div className=" lg:my-14 md:my-8 my-4">
         <Outlet />
         </div>
       </div>

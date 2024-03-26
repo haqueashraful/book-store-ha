@@ -18,7 +18,7 @@ const Home = () => {
 
         fetchData();
     }, []); 
-    console.log(books)
+    // console.log(books)
     return (
         <div>
             <Banner/>

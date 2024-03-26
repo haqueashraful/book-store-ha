@@ -1,11 +1,17 @@
-import  { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 const MyContext = createContext();
 
 const Context = ({ children }) => {
-    const [books, setBooks]=useState([])
+  const [books, setBooks] = useState([]);
+  const [sortBy, setSortBy] = useState("ratings"); 
+
+  const handleSortChange = (event) => {
+    setSortBy(event.target.value);
+  };
+
   return (
-    <MyContext.Provider value={{ books, setBooks }}>
+    <MyContext.Provider value={{ books, setBooks, handleSortChange, sortBy, setSortBy }}>
       {children}
     </MyContext.Provider>
   );

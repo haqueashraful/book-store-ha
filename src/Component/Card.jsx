@@ -33,10 +33,10 @@ const Card = ({ book }) => {
           />
         </figure>
         <div className="card-body space-y-5">
-          <div className="  space-x-5">
+          <div className=" space-x-5">
             {tags.map((tag, index) => (
               <span
-                className="bg-green-50 rounded-full px-5 py-1 text-green-500 font-semibold"
+                className="bg-green-50 rounded-full lg:px-5 px-1 py-1 text-green-500 font-semibold"
                 key={index}
               >
                 #{tag}

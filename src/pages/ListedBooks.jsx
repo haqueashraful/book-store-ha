@@ -1,21 +1,38 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { MyContext } from "../Component/Context";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
+  const { handleSortChange } = useContext(MyContext);
 
   return (
     <div className=" w-full">
       <div className=" w-full p-5 bg-gray-300 rounded-lg">
         <h1 className=" text-black font-bold text-5xl text-center">Books</h1>
       </div>
-      <div className="flex items-center justify-center my-10 w-full  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap  text-gray-800">
+      <div className="my-4 text-center">
+        <select
+          id="sort"
+          className="px-4 py-2 rounded-lg bg-green-400 outline-none border-none text-xl text-white hover:bg-green-500"
+          onChange={handleSortChange}
+        >
+          <option className=" hover:bg-white hover:text-black " value="rating">Ratings</option>
+          <option value="totalPages">Number of pages</option>
+          <option value="yearOfPublishing">Publishing year</option>
+        </select>
+      </div>
+      <div className="flex items-center justify-center my-10 w-full  overflow-x-auto overflow-y-hidden sm:justify-start  flex-nowrap  text-gray-800">
         <Link
-        //   to="/listedbook"
+          className={`flex items-center flex-shrink-0 hidden lg:block md:block  px-10 py-6 space-x-2 ${
+            tabIndex === 5 ? "border border-b-0" : "border-b"
+          } rounded-t-lg border-gray-600 text-gray-900`}
+        ></Link>
+        <Link
           onClick={() => setTabIndex(0)}
           rel="noopener noreferrer"
           href="#"
-          className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
+          className={`flex items-center flex-shrink-0 lg:px-5 md:px-5 px-3 py-3 space-x-2 ${
             tabIndex === 0 ? "border border-b-0" : "border-b"
           } rounded-t-lg border-gray-600 text-gray-900`}
         >
@@ -38,7 +55,7 @@ const ListedBooks = () => {
           onClick={() => setTabIndex(1)}
           rel="noopener noreferrer"
           href="#"
-          className={`flex items-center flex-shrink-0 flex-auto px-5 py-3 space-x-2 ${
+          className={`flex items-center flex-shrink-0  lg:px-5 md:px-5 px-3 py-3 space-x-2 ${
             tabIndex === 1 ? "border border-b-0" : "border-b"
           } rounded-t-lg border-gray-600 text-gray-900`}
         >
@@ -57,8 +74,12 @@ const ListedBooks = () => {
           </svg>
           <span>Wishlist Books</span>
         </Link>
+        <Link
+          className={`flex items-center flex-auto hidden lg:block md:block flex-shrink-0  px-5 py-6 space-x-2 ${
+            tabIndex === 5 ? "border border-b-0" : "border-b"
+          } rounded-t-lg border-gray-600 text-gray-900`}
+        ></Link>
       </div>
-
       <div className="my-10">
         <Outlet />
       </div>
