@@ -11,7 +11,7 @@ const ListedBooks = () => {
       </div>
       <div className="flex items-center justify-center my-10 w-full  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap  text-gray-800">
         <Link
-          to="/listedbook"
+        //   to="/listedbook"
           onClick={() => setTabIndex(0)}
           rel="noopener noreferrer"
           href="#"
