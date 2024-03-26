@@ -1,11 +1,11 @@
 import Banner from "../Component/Banner";
 import Cards from "../Component/Cards";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { MyContext } from "../Component/Context";
 
 const Home = () => {
-    const [books, setBooks]=useState([])
-
+    const {books, setBooks} = useContext(MyContext)
     useEffect(() => {
         const fetchData = async () => {
             try {

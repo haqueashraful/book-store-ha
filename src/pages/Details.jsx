@@ -1,13 +1,23 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useContext } from "react";
+import {  useParams } from "react-router-dom";
+import { MyContext } from "../Component/Context";
+import { getItem, saveItem } from "../Utils/shared";
 
 const Details = () => {
-  const { id } = useParams();
-  const books = useLoaderData();
-  console.log(books);
-  console.log(parseInt(id));
 
+  const {books, setBooks} = useContext(MyContext)
+  const { id } = useParams();
+  console.log(books)
   const book = books.find((book) => book.bookid === parseInt(id));
   console.log(book);
+
+  const addToReadList = ()=>{
+    saveItem('readed', book)    
+  }
+  const addToWishList = ()=>{
+    saveItem("wishes", book)
+  }
+
   const {
     bookName,
     author,
@@ -73,8 +83,8 @@ const Details = () => {
           </table>
         </div>
         <div className="card-actions">
-          <button className="btn bg-transparent border-2 border-violet-400 rounded-xl hover:bg-violet-500 hover:text-white hover:border-none px-5">Read</button>
-          <button className="btn bg-violet-500 text-white hover:border-2 hover:border-violet-400 hover:bg-transparent hover:text-black">WishList</button>
+          <button onClick={addToReadList} className="btn bg-transparent border-2 border-violet-400 rounded-xl hover:bg-violet-500 hover:text-white hover:border-none px-5">Read</button>
+          <button onClick={addToWishList} className="btn bg-violet-500 text-white hover:border-2 hover:border-violet-400 hover:bg-transparent hover:text-black">WishList</button>
         </div>
       </div>
     </div>
