@@ -37,6 +37,7 @@ const Nav = () => {
           <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/">Home</NavLink>
           <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/listedbook">Listed Book</NavLink>
           <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/pagetoread">Pages to Read</NavLink>
+          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/pagestowishes">Pages to WishList</NavLink>
         </ul>
       </div>
       <div className="navbar-end gap-5">
