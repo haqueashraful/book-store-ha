@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import cover from "../assets/cover.png";
 const Banner = () => {
   return (
-    <section className="bg-[#1313130D] rounded-lg">
+    <section className="bg-[#1313130D] rounded-xl">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center gap-10 p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">

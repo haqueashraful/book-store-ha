@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import './Nav.css'
 const Nav = () => {
   return (
     <div className="navbar bg-base-100 py-5">
@@ -25,23 +25,23 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/">Home</NavLink>
-            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/listedbook">Listed Book</NavLink>
-            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/pagetoread">Pages to Read</NavLink>
+            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/">Home</NavLink>
+            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/listedbook">Listed Book</NavLink>
+            <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/pagetoread">Pages to Read</NavLink>
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost text-2xl text-violet-400 hover:bg-violet-500 hover:text-white">Book Store</Link>
+        <Link to='/' className="btn btn-ghost text-2xl text-violet-400 hover:bg-[#4e0ce8] hover:text-white">Book Store</Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1 gap-5">
-          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/">Home</NavLink>
-          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/listedbook">Listed Book</NavLink>
-          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 " to="/pagetoread">Pages to Read</NavLink>
+          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/">Home</NavLink>
+          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/listedbook">Listed Book</NavLink>
+          <NavLink className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]" to="/pagetoread">Pages to Read</NavLink>
         </ul>
       </div>
       <div className="navbar-end gap-5">
-        <Link to='/workonit' className="btn  bg-violet-400 text-xl text-white hover:bg-violet-500 ">Sign in</Link>
-        <Link to='/workonit' className="btn  bg-indigo-500 text-xl text-white hover:bg-violet-400 ">Sign up</Link>
+        <Link to='/workonit' className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]">Sign in</Link>
+        <Link to='/workonit' className="btn  bg-indigo-500 text-xl text-white hover:bg-[#4e0ce8] ">Sign up</Link>
       </div>
     </div>
   );
