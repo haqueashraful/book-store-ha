@@ -8,6 +8,7 @@ import WorkOnIt from "../pages/WorkOnIt";
 import Details from "../pages/Details";
 import ReadList from "../pages/ReadList";
 import WishList from "../pages/WishList";
+import PagesToWishlist from "../pages/PagesToWishlist";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/pagetoread",
         element: <PagesToRead />,
+      },
+      {
+        path: '/pagestowishes',
+        element: <PagesToWishlist/>
       },
       {
         path: "/workonit",
