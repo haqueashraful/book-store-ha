@@ -48,7 +48,7 @@ const ListedCard = ({ book }) => {
           <p>Publisher: {publisher}</p>
           <p>Pages: {totalPages}</p>
         </div>
-        <div className="divider mt-0 mb-0"></div>
+        <div className="divider mt-2 mb-2"></div>
         <div className="flex justify-start items-center gap-8">
           <p className="bg-green-50 rounded-full px-5 py-1 text-green-500 font-semibold">
            Category: {category}
@@ -58,7 +58,7 @@ const ListedCard = ({ book }) => {
           </p>
 
           <div>
-            <Link to={`/details/${bookid}`}><button  className="btn px-5 py-1 rounded-full bg-violet-400 text-white hover:bg-violet-500 ">View details</button></Link>
+            <Link to={`/details/${bookid}`}><button  className="btn h-8 min-h-8 px-5 py-1 rounded-full bg-violet-400 text-white hover:bg-violet-500 ">View details</button></Link>
           </div>
         </div>
       </div>

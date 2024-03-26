@@ -7,7 +7,9 @@ const Layout = () => {
     <div>
       <div className=" lg:mx-28">
         <Nav />
+        <div className=" my-14">
         <Outlet />
+        </div>
       </div>
       <Footer />
     </div>

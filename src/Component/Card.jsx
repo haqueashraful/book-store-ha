@@ -1,8 +1,20 @@
 import { Link, useParams } from "react-router-dom";
+import { CiStar } from "react-icons/ci";
 
 const Card = ({ book }) => {
-//   console.log(book);
-  const { bookName, author, review, bookid } = book;
+  //   console.log(book);
+  const {
+    bookid,
+    bookName,
+    author,
+    publisher,
+    category,
+    review,
+    tags,
+    totalPages,
+    yearOfPublishing,
+    rating,
+  } = book;
 
   const navigateToDetails = () => {
     // console.log(bookid);
@@ -13,20 +25,35 @@ const Card = ({ book }) => {
         onClick={navigateToDetails}
         className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:border-violet-500"
       >
-        <figure className="px-5 pt-5">
+        <figure className="px-5 pt-5 rounded-lg">
           <img
             src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
             alt="Shoes"
             className="rounded-xl"
           />
         </figure>
-        <div className="card-body ">
-          <h2 className="card-title">{bookName}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions">
-            <button className="btn bg-violet-400 text-white hover:bg-violet-500">
-              Buy Now
-            </button>
+        <div className="card-body space-y-5">
+          <div className="  space-x-5">
+            {tags.map((tag, index) => (
+              <span
+                className="bg-green-50 rounded-full px-5 py-1 text-green-500 font-semibold"
+                key={index}
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+          <div className=" space-y-3">
+            <h2 className="card-title text-2xl font-bold">{bookName}</h2>
+            <p className=" text-lg font-medium ">By: {author}</p>
+          </div>
+          <div className="border-b-2 border-dashed"></div>
+          <div className=" flex justify-between items-center ">
+            <p className=" text-xl">{category}</p>
+            <p className=" justify-end flex gap-5 items-center text-xl text-left">
+              {rating}
+              <CiStar />
+            </p>
           </div>
         </div>
       </div>
