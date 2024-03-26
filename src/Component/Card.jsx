@@ -9,6 +9,7 @@ const Card = ({ book }) => {
     author,
     publisher,
     category,
+    image,
     review,
     tags,
     totalPages,
@@ -27,9 +28,9 @@ const Card = ({ book }) => {
       >
         <figure className="px-5 pt-5 rounded-lg">
           <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-            className="rounded-xl"
+            src={image}
+            alt={bookName}
+            className="rounded-xl w-96 h-96"
           />
         </figure>
         <div className="card-body space-y-5">

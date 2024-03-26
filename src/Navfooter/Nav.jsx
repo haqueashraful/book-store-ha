@@ -89,13 +89,13 @@ const Nav = () => {
       <div className="navbar-end gap-5 ">
         <Link
           to="/workonit"
-          className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8] hidden md:block lg:block xl:block"
+          className="btn h-1 py-2 bg-violet-400 text-xl text-white hover:bg-[#4e0ce8] hidden md:block lg:block xl:block"
         >
           Sign in
         </Link>
         <Link
           to="/workonit"
-          className="btn  bg-indigo-500 text-xl text-white hover:bg-[#4e0ce8] hidden md:block lg:block xl:block"
+          className="btn h-1 py-2 bg-indigo-500 text-xl text-white hover:bg-[#4e0ce8] hidden md:block lg:block xl:block"
         >
           Sign up
         </Link>

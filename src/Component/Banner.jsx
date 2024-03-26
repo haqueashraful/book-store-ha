@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import cover from "../assets/cover.png";
 const Banner = () => {
+  
   return (
     <section className="bg-[#1313130D] rounded-xl lg:px-10 md:px-5 px-2">
       <div className="container flex flex-col-reverse justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">

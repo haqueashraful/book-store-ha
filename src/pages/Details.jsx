@@ -34,10 +34,12 @@ const Details = () => {
   };
 
   const {
+    bookid,
     bookName,
     author,
     publisher,
     category,
+    image,
     review,
     tags,
     totalPages,
@@ -50,8 +52,8 @@ const Details = () => {
       <figure className="w-1/2 bg-violet-50">
         <img
           className="w-1/2"
-          src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-          alt="Movie"
+          src={image}
+          alt={bookName}
         />
       </figure>
       <div className="card-body w-1/2">

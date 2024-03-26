@@ -5,6 +5,7 @@ const ListedCard = ({ book }) => {
     bookid,
     bookName,
     author,
+    image,
     publisher,
     category,
     review,
@@ -17,8 +18,8 @@ const ListedCard = ({ book }) => {
     <div className="lg:flex w-full border-2 p-5 rounded-lg space-x-2 sm:space-x-4">
       <img
         className="flex-shrink-0 object-cover lg:w-48 md:w-48 lg:h-48 md:h-48 w-full border-transparent rounded outline-none bg-gray-500"
-        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"
-        alt="Polaroid camera"
+        src={image}
+        alt={bookName}
       />
       <div className="lg:flex md:flex flex-col space-y-4 w-full">
         <div className="flex justify-between w-full space-x-2">
