@@ -6,8 +6,7 @@ const WishList = () => {
     const books = getItem('wishes')
     console.log(books)
     return (
-        <div>
-                <h1>wishes listed</h1>
+        <div className=" grid gap-5"pro>
               {
                 books.map(book =>   <ListedCard key={book.bookid} book={book}/>)
               }

@@ -1,8 +1,13 @@
+import ListedCard from "../Component/ListedCard";
+import { getItem } from "../Utils/shared";
 
 const ReadList = () => {
+    const books = getItem("readed")
     return (
-        <div>
-            <h1>read listed</h1>
+        <div className=" grid gap-5">
+            {
+                books.map(book =>   <ListedCard key={book.bookid} book={book}/>)
+              }
         </div>
     );
 };

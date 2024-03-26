@@ -9,9 +9,9 @@ const ListedBooks = () => {
       <div className=" w-full p-5 bg-gray-300 rounded-lg">
         <h1 className=" text-black font-bold text-5xl text-center">Books</h1>
       </div>
-      <div className="flex items-center justify-center w-full  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap  text-gray-800">
+      <div className="flex items-center justify-center my-10 w-full  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap  text-gray-800">
         <Link
-        to='/listedbook'
+          to="/listedbook"
           onClick={() => setTabIndex(0)}
           rel="noopener noreferrer"
           href="#"
@@ -34,7 +34,7 @@ const ListedBooks = () => {
           <span>Read Books</span>
         </Link>
         <Link
-        to="wishlist"
+          to="wishlist"
           onClick={() => setTabIndex(1)}
           rel="noopener noreferrer"
           href="#"
@@ -59,7 +59,9 @@ const ListedBooks = () => {
         </Link>
       </div>
 
-      <Outlet/>
+      <div className="my-10">
+        <Outlet />
+      </div>
     </div>
   );
 };
