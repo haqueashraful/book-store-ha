@@ -1,11 +1,11 @@
 
 
-
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
-- Bullet point 4
-- Bullet point 5
+# Some Package which are use in this project
+- [@vitejs/plugin-react]
+- [React Router]
+- [Context Api]
+- [Tailwind & DaisyUi]
+- [Netlify]
 
 
 
