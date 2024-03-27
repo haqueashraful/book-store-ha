@@ -1,40 +1,40 @@
-import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { MyContext } from "../Component/Context";
 import { getItem, saveItem } from "../Utils/shared";
 import toast from "react-hot-toast";
 
 const Details = () => {
-  const { books } = useContext(MyContext);
+  const books = getItem('books')
   const { id } = useParams();
+  const book = books[0]?.find((book) => book.bookid === parseInt(id));
 
-  const book = books.find((book) => book.bookid === parseInt(id));
 
   if (!book) {
-    return <div>Book not found</div>;
+    return <div>Book not found...</div>; 
   }
 
   const addToReadList = () => {
-    saveItem('readed', book);
-
-    console.log(getItem("readed"))
+    const readedList = getItem("readed") || [];
+    const exist = readedList.find((b) => b.bookid === book.bookid);
+    if (exist) {
+      toast.error("Already Readed");
+    } else {
+      toast.success("Complete Readed")
+      saveItem('readed', book);
+    }
   };
 
   const addToWishList = () => {
-    let item = getItem("readed")
-
-    let exist = item.find((b)=>{
-      return b.bookid == book.bookid
-    })
-    if(exist){
-      return toast.error("already readed")
-    }else{
-      saveItem("wishes", book)
+    const readedList = getItem("readed") || [];
+    const exist = readedList.find((b) => b.bookid === book.bookid);
+    if (exist) {
+      toast.error("Already readed");
+    } else {
+      saveItem("wishes", book);
+      toast.success("successFully Added")
     }
   };
 
   const {
-    bookid,
     bookName,
     author,
     publisher,

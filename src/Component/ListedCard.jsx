@@ -1,4 +1,8 @@
+import { CiTimer } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { FiUsers } from "react-icons/fi";
+import { FaRegCopy } from "react-icons/fa6";
+import PropTypes from 'prop-types'
 
 const ListedCard = ({ book }) => {
   const {
@@ -8,7 +12,6 @@ const ListedCard = ({ book }) => {
     image,
     publisher,
     category,
-    review,
     tags,
     totalPages,
     yearOfPublishing,
@@ -33,40 +36,56 @@ const ListedCard = ({ book }) => {
         <div className=" lg:flex md:flex justify-start items-center gap-8">
           <div className="lg:flex md:flex gap-3">
             <p className="font-bold lg:text-xl md:text-xl text-black">Tag: </p>
-           <p className=" flex">
-           {tags.map((tag, index) => (
-              <span
-                className="bg-green-50 rounded-full px-5 py-1 text-green-500 md:font-semibold font-normal lg:font-semibold"
-                key={index}
-              >
-                #{tag}
-              </span>
-            ))}
-           </p>
+            <p className=" flex">
+              {tags.map((tag, index) => (
+                <span
+                  className="bg-green-50 rounded-full px-5 py-1 text-green-500 md:font-semibold font-normal lg:font-semibold"
+                  key={index}
+                >
+                  #{tag}
+                </span>
+              ))}
+            </p>
           </div>
 
-          <p>Year of Publishing: {yearOfPublishing}</p>
+          <p className="flex items-center">
+            <CiTimer className="mr-2" /> Year of Publishing: {yearOfPublishing}
+          </p>
         </div>
         <div className=" lg:flex md:flex justify-start items-center gap-8">
-          <p>Publisher: {publisher}</p>
-          <p>Pages: {totalPages}</p>
+          <p className="flex items-center">
+            <FiUsers className="mr-2" />
+            Publisher: {publisher}
+          </p>
+          <p className="flex items-center">
+            <FaRegCopy className="mr-2" />
+            Pages: {totalPages}
+          </p>
         </div>
         <div className="divider mt-2 mb-2"></div>
         <div className="lg:flex md:flex static justify-start items-center gap-8">
           <p className="bg-green-50 rounded-full px-5 py-1 text-green-500 font-semibold">
-           Category: {category}
+            Category: {category}
           </p>
           <p className="bg-yellow-50 rounded-full px-5 py-1 text-yellow-500 font-semibold">
-           Ratings: {rating}
+            Ratings: {rating}
           </p>
 
           <div className=" w-1/2">
-            <Link to={`/details/${bookid}`}><button  className="btn h-8 min-h-8 px-5 py-1 lg:w-auto md:w-auto w-full rounded-full bg-violet-400 text-white hover:bg-violet-500 ">View details</button></Link>
+            <Link to={`/details/${bookid}`}>
+              <button className="btn h-8 min-h-8 px-5 py-1 lg:w-auto md:w-auto w-full rounded-full bg-violet-400 text-white hover:bg-violet-500 ">
+                View details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+ListedCard.propTypes = {
+  book: PropTypes.object,
+}
 
 export default ListedCard;

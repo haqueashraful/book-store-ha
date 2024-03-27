@@ -1,8 +1,9 @@
+import { useContext } from "react";
 import Card from "./Card";
+import { MyContext } from "./Context";
 
-const Cards = ({books}) => {
-
-    // console.log(books);
+const Cards = () => {
+    const {books} = useContext(MyContext)
     return (
         <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {

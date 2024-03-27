@@ -14,7 +14,6 @@ const PagesToRead = () => {
   const colors = ["#00C49F", "#0088FE", "#FFBB28", "#FF8042", "red", "pink"];
 
   const readedData = getItem("readed");
-  console.log(readedData);
 
   const chartData = readedData.map((book) => ({
     name: book.bookName,
@@ -32,6 +31,7 @@ const PagesToRead = () => {
   };
 
   const TriangleBar = (props) => {
+    // eslint-disable-next-line react/prop-types
     const { fill, x, y, width, height } = props;
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;

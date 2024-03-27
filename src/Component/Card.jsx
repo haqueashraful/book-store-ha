@@ -1,36 +1,30 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
+import PropTypes from 'prop-types'
 
 const Card = ({ book }) => {
-  //   console.log(book);
+  
   const {
     bookid,
     bookName,
     author,
-    publisher,
     category,
     image,
-    review,
     tags,
-    totalPages,
-    yearOfPublishing,
     rating,
   } = book;
 
-  const navigateToDetails = () => {
-    // console.log(bookid);
-  };
+
   return (
     <Link to={`/details/${bookid}`}>
       <div
-        onClick={navigateToDetails}
-        className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:border-violet-500"
+        className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:scale-105 hover:border-violet-500"
       >
         <figure className="px-5 pt-5 rounded-lg">
           <img
             src={image}
             alt={bookName}
-            className="rounded-xl w-96 h-96"
+            className="rounded-xl w-full h-80"
           />
         </figure>
         <div className="card-body space-y-5">
@@ -61,5 +55,9 @@ const Card = ({ book }) => {
     </Link>
   );
 };
+
+Card.propTypes = {
+  book: PropTypes.object,
+}
 
 export default Card;
