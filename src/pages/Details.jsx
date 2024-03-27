@@ -48,16 +48,16 @@ const Details = () => {
   } = book;
 
   return (
-    <div className="card card-side w-full bg-base-100 shadow-xl">
-      <figure className="w-1/2 bg-violet-50">
+    <div className="flex flex-col lg:flex-row md:flex-row w-full bg-base-100 shadow-xl">
+      <figure className="sm:w-1/2 w-full flex justify-center items-center bg-violet-50">
         <img
           className="w-1/2"
           src={image}
           alt={bookName}
         />
       </figure>
-      <div className="card-body w-1/2">
-        <h1 className="card-title text-5xl font-bold text-black">{bookName}</h1>
+      <div className="p-1 lg:p-8 md:p-8 w-full sm:w-1/2">
+        <h1 className="card-title text-5xl font-medium md:font-bold lg:font-bold text-black">{bookName}</h1>
         <p className="text-xl font-medium py-4"> By: {author}</p>
         <div className="border-y-2 border-slate-300">
           <p className="py-3 text-xl">{category}</p>
@@ -81,20 +81,20 @@ const Details = () => {
           <table className="">
             <tbody>
               <tr>
-                <td className="pr-20 text-xl py-2">Number of Page:</td>
-                <td className="text-xl font-bold">{totalPages}</td>
+                <td className="pr-20 sm:pr-2 text-xl py-2">Number of Page:</td>
+                <td className="text-xl lg:font-bold md:font-bold">{totalPages}</td>
               </tr>
               <tr>
-                <td className="pr-20 text-xl py-2">Publisher:</td>
-                <td className="text-xl font-bold">{publisher}</td>
+                <td className="pr-20 sm:pr-2 text-xl py-2">Publisher:</td>
+                <td className="text-xl lg:font-bold md:font-bold">{publisher}</td>
               </tr>
               <tr>
-                <td className="pr-20 text-xl py-2">Year of publishing:</td>
-                <td className="text-xl font-bold">{yearOfPublishing}</td>
+                <td className="pr-20 sm:pr-2 text-xl py-2">Year of publishing:</td>
+                <td className="text-xl lg:font-bold md:font-bold">{yearOfPublishing}</td>
               </tr>
               <tr>
-                <td className="pr-20 text-xl py-2">Ratings:</td>
-                <td className="text-xl font-bold">{rating}</td>
+                <td className="pr-20 sm:pr-2 text-xl py-2">Ratings:</td>
+                <td className="text-xl lg:font-bold md:font-bold">{rating}</td>
               </tr>
             </tbody>
           </table>

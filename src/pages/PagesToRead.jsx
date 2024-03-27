@@ -37,7 +37,7 @@ const PagesToRead = () => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
   return (
-    <div>
+    <div  className="bg-[#13131308] p-0 py-0 lg:p-5 md:p-5 lg:py-10 md:py-10 rounded-lg">
       <h1>pages to Wishlist </h1>
       <ResponsiveContainer width="100%" height={500}>
         <BarChart width={150} height={60} data={chartData}>

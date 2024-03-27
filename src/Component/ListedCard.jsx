@@ -20,17 +20,17 @@ const ListedCard = ({ book }) => {
   return (
     <div className="lg:flex w-full border-2 p-5 rounded-lg space-x-2 sm:space-x-4">
       <img
-        className="flex-shrink-0 object-cover lg:w-48 md:w-48 lg:h-48 md:h-48 w-full border-transparent rounded outline-none bg-gray-500"
+        className="flex-shrink-0 object-cover lg:w-48 md:w-48  w-full border-transparent rounded outline-none bg-gray-500"
         src={image}
         alt={bookName}
       />
       <div className="lg:flex md:flex flex-col space-y-4 w-full">
         <div className="flex justify-between w-full space-x-2">
           <div className="space-y-1 pb-2">
-            <h3 className="text-lg font-semibold leading-snug sm:pr-8">
+            <h3 className="text-2xl font-semibold leading-snug sm:pr-8">
               {bookName}
             </h3>
-            <p className="text-sm text-gray-600">By: {author}</p>
+            <p className="text-lg text-gray-600">By: {author}</p>
           </div>
         </div>
         <div className=" lg:flex md:flex justify-start items-center gap-8">

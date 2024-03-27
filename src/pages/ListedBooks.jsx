@@ -9,12 +9,12 @@ const ListedBooks = () => {
   return (
     <div className=" w-full">
       <div className=" w-full p-5 bg-gray-300 rounded-lg">
-        <h1 className=" text-black font-bold text-5xl text-center">Books</h1>
+        <h1 className=" text-violet-400 font-bold text-5xl text-center">Books</h1>
       </div>
       <div className="my-4 text-center">
         <select
           id="sort"
-          className="px-4 py-2 rounded-lg bg-green-400 outline-none border-none text-xl text-white hover:bg-green-500"
+          className="px-4 py-2 rounded-lg bg-green-400 outline-none border-none text-2xl text-white hover:bg-green-500"
           onChange={handleSortChange}
         >
           <option className=" hover:bg-white hover:text-black " value="rating">Ratings</option>

@@ -20,11 +20,11 @@ const Card = ({ book }) => {
       <div
         className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:scale-105 hover:border-violet-500"
       >
-        <figure className="px-5 pt-5 rounded-lg">
+        <figure className="px-5 pt-5 rounded-lg bg-[#1313130D]">
           <img
             src={image}
             alt={bookName}
-            className="rounded-xl w-full h-80"
+            className="rounded-xl w-48 h-72 p-5"
           />
         </figure>
         <div className="card-body space-y-5">
