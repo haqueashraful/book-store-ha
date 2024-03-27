@@ -1,11 +1,11 @@
 
 
 # Some Package which are use in this project
-- [@vitejs/plugin-react]
-- [React Router]
-- [Context Api]
-- [Tailwind & DaisyUi]
-- [Netlify]
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) 
+- React Router
+- Context Api
+- Tailwind & DaisyUi
+- Netlify
 
 
 
