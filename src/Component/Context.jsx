@@ -5,7 +5,7 @@ const MyContext = createContext();
 
 const Context = ({ children }) => {
   const [books, setBooks] = useState([]);
-  const [sortBy, setSortBy] = useState("rating"); 
+  const [sortBy, setSortBy] = useState(); 
 
   const handleSortChange = (event) => {
     setSortBy(event.target.value);

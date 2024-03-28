@@ -17,6 +17,7 @@ const ListedBooks = () => {
           className="px-4 py-2 rounded-lg bg-violet-400 outline-none border-none text-2xl text-white hover:bg-violet-500"
           onChange={handleSortChange}
         >
+          <option value="">Sory by</option>
           <option className=" hover:bg-white hover:text-black " value="rating">Ratings</option>
           <option value="totalPages">Number of pages</option>
           <option value="yearOfPublishing">Publishing year</option>
