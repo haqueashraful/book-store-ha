@@ -18,7 +18,7 @@ const Card = ({ book }) => {
   return (
     <Link to={`/details/${bookid}`}>
       <div
-        className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:scale-105 hover:border-violet-500"
+        className="card w-full bg-base-100 shadow-xl border hover:border-2 hover:scale-105 hover:border-violet-500 min-h-[635px]"
       >
         <figure className="px-5 pt-5 rounded-lg bg-[#1313130D]">
           <img
@@ -28,10 +28,10 @@ const Card = ({ book }) => {
           />
         </figure>
         <div className="card-body space-y-5">
-          <div className=" space-x-5">
+          <div className=" flex flex-wrap gap-3">
             {tags.map((tag, index) => (
               <span
-                className="bg-green-50 rounded-full lg:px-5 px-1 py-1 text-green-500 font-semibold"
+                className="bg-green-50 rounded-full  lg:px-5 px-1 py-1 text-green-500 font-semibold"
                 key={index}
               >
                 #{tag}

@@ -9,6 +9,8 @@ import Details from "../pages/Details";
 import ReadList from "../pages/ReadList";
 import WishList from "../pages/WishList";
 import PagesToWishlist from "../pages/PagesToWishlist";
+import Review from "../pages/Review";
+import Ratings from "../pages/Ratings";
 
 const router = createBrowserRouter([
   {
@@ -23,16 +25,16 @@ const router = createBrowserRouter([
       {
         path: "/listedbook",
         element: <ListedBooks />,
-        children:[
+        children: [
           {
             index: true,
-            element: <ReadList/>
+            element: <ReadList />,
           },
           {
-            path: 'wishlist',
-            element: <WishList />
-          }
-        ]
+            path: "wishlist",
+            element: <WishList />,
+          },
+        ],
       },
       {
         path: "details/:id",
@@ -44,8 +46,12 @@ const router = createBrowserRouter([
         element: <PagesToRead />,
       },
       {
-        path: '/pagestowishes',
-        element: <PagesToWishlist/>
+        path: "/pagestowishes",
+        element: <PagesToWishlist />,
+      },
+      {
+        path: '/ratings',
+        element: <Ratings/>
       },
       {
         path: "/workonit",
