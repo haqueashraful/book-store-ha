@@ -26,25 +26,25 @@ const Nav = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <NavLink
-              className="btn  bg-violet-400 text-lg text-white hover:bg-[#4e0ce8]"
+              className="btn  bg-violet-400 text-lg text-white hover:bg-[#9c78ef]"
               to="/"
             >
               Home
             </NavLink>
             <NavLink
-              className="btn  bg-violet-400 text-lg text-white hover:bg-[#4e0ce8]"
+              className="btn  bg-violet-400 text-lg text-white hover:bg-[#9c78ef]"
               to="/listedbook"
             >
               Listed Book
             </NavLink>
             <NavLink
-              className="btn  bg-violet-400 text-lg text-white hover:bg-[#4e0ce8]"
+              className="btn  bg-violet-400 text-lg text-white hover:bg-[#9c78ef]"
               to="/pagetoread"
             >
               Pages to Read
             </NavLink>
             <NavLink
-              className="btn  bg-violet-400 text-lg text-white hover:bg-[#4e0ce8]"
+              className="btn  bg-violet-400 text-lg text-white hover:bg-[#9c78ef]"
               to="/pagestowishes"
             >
               Pages to WishList
@@ -53,7 +53,7 @@ const Nav = () => {
         </div>
         <Link
           to="/"
-          className="btn btn-ghost text-2xl text-violet-400 hover:bg-[#4e0ce8] hover:text-white"
+          className="btn btn-ghost text-2xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
         >
           Book Store
         </Link>
@@ -61,31 +61,31 @@ const Nav = () => {
       <div className="navbar-center hidden lg:flex flex-grow">
         <ul className="menu menu-horizontal px-1 gap-2">
           <NavLink
-            className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]"
+            className="btn bg-transparent border-r-violet-400 text-xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
             to="/"
           >
             Home
           </NavLink>
           <NavLink
-            className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]"
+            className="btn bg-transparent border-r-violet-400 text-xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
             to="/listedbook"
           >
             Listed Book
           </NavLink>
           <NavLink
-            className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]"
+            className="btn bg-transparent border-r-violet-400 text-xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
             to="/pagetoread"
           >
             Pages to Read
           </NavLink>
           <NavLink
-            className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]"
+            className="btn bg-transparent border-r-violet-400 text-xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
             to="/pagestowishes"
           >
             Pages to WishList
           </NavLink>
           <NavLink
-            className="btn  bg-violet-400 text-xl text-white hover:bg-[#4e0ce8]"
+            className="btn bg-transparent border-r-violet-400 text-xl text-violet-400 hover:bg-[#9c78ef] hover:text-white"
             to="/ratings"
           >
             Ratings
@@ -95,13 +95,13 @@ const Nav = () => {
       <div className="navbar-end gap-5 hidden md:hidden lg:hidden xl:flex">
         <Link
           to="/workonit"
-          className="btn h-1 py-2 bg-violet-400 text-xl text-white hover:bg-[#4e0ce8] "
+          className="btn h-1 py-2 bg-violet-400 text-xl text-white hover:bg-[#9c78ef] "
         >
           Sign in
         </Link>
         <Link
           to="/workonit"
-          className="btn h-1 py-2 bg-indigo-500 text-xl text-white hover:bg-[#4e0ce8] "
+          className="btn h-1 py-2 bg-indigo-500 text-xl text-white hover:bg-[#9c78ef] "
         >
           Sign up
         </Link>

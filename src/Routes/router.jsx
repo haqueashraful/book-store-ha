@@ -9,7 +9,6 @@ import Details from "../pages/Details";
 import ReadList from "../pages/ReadList";
 import WishList from "../pages/WishList";
 import PagesToWishlist from "../pages/PagesToWishlist";
-import Review from "../pages/Review";
 import Ratings from "../pages/Ratings";
 
 const router = createBrowserRouter([

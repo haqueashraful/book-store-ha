@@ -14,7 +14,7 @@ const ListedBooks = () => {
       <div className="my-4 text-center">
         <select
           id="sort"
-          className="px-4 py-2 rounded-lg bg-green-400 outline-none border-none text-2xl text-white hover:bg-green-500"
+          className="px-4 py-2 rounded-lg bg-violet-400 outline-none border-none text-2xl text-white hover:bg-violet-500"
           onChange={handleSortChange}
         >
           <option className=" hover:bg-white hover:text-black " value="rating">Ratings</option>

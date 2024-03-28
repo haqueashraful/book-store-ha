@@ -4,7 +4,7 @@ import Footer from "../Navfooter/Footer";
 
 const Layout = () => {
   return (
-    <div>
+    <div className=" font-[playfair]">
       <div className=" lg:mx-14 xl:mx-28 md:mx-12 mx-2 ">
         <Nav />
         <div className=" lg:my-14 md:my-8 my-4">
