@@ -18,7 +18,7 @@ const ListedCard = ({ book }) => {
     rating,
   } = book;
   return (
-    <div className="lg:flex w-full border-2 p-5 rounded-lg space-x-2 sm:space-x-4">
+    <div className="md:flex w-full border-2 p-5 rounded-lg space-x-2 sm:space-x-4">
       <img
         className="flex-shrink-0 object-cover lg:w-48 md:w-48  w-full border-transparent rounded outline-none bg-gray-500"
         src={image}
@@ -63,7 +63,7 @@ const ListedCard = ({ book }) => {
           </p>
         </div>
         <div className="divider mt-2 mb-2"></div>
-        <div className="lg:flex md:flex static justify-start items-center gap-8">
+        <div className=" md:flex space-y-3 md:space-y-0 static justify-start items-center gap-8">
           <p className="bg-green-50 rounded-full px-5 py-1 text-green-500 font-semibold">
             Category: {category}
           </p>
@@ -71,7 +71,7 @@ const ListedCard = ({ book }) => {
             Ratings: {rating}
           </p>
 
-          <div className=" w-1/2">
+          <div className=" lg:w-1/2">
             <Link to={`/details/${bookid}`}>
               <button className="btn h-8 min-h-8 px-5 py-1 lg:w-auto md:w-auto w-full rounded-full bg-violet-400 text-white hover:bg-violet-500 ">
                 View details
